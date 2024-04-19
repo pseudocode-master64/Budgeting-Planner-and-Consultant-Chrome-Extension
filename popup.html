@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Popup</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="popup.js"></script>
+</head>
+<body>
+    <div id="score">
+        Score: [Your Score Goes Here]
+    </div>
+    <button id="addProductButton">+</button>
+    <div id="productList">
+        <!-- Display added products here -->
+    </div>
+    <form id="surveyForm">
+        <label for="prompt">Rate the following categories based on your priority when online shopping from 1 (low) to 5 (high):</label><br>
+        
+        <label for="exercise">Exercise (1-5):</label>
+        <input type="number" id="exercise" min="1" max="5" required><br><br>
+
+        <label for="diet">Diet (1-5):</label>
+        <input type="number" id="diet" min="1" max="5" required><br><br>
+
+        <label for="personalCare">Personal Care (1-5):</label>
+        <input type="number" id="personalCare" min="1" max="5" required><br><br>
+
+        <label for="clothes">Clothes (1-5):</label>
+        <input type="number" id="clothes" min="1" max="5" required><br><br>
+
+        <label for="entertainment">Entertainment (1-5):</label>
+        <input type="number" id="entertainment" min="1" max="5" required><br><br>
+
+        <label for="electronics">Electronics (1-5):</label>
+        <input type="number" id="electronics" min="1" max="5" required><br><br>
+
+        <label for="budget">Weekly Online Shopping Budget $:</label>
+        <input type="number" id="budget" required><br>
+
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+    <div id="submittedMessage">
+        <p>Submitted results:</p>
+        <div id="collectedValues">
+          <p>Exercise Rating: <span id="exerciseRating">[Exercise Rating Goes Here]</span></p>
+          <p>Diet Rating: <span id="dietRating">[Diet Rating Goes Here]</span></p>
+          <p>Personal Care Rating: <span id="personalCareRating">[Personal Care Rating Goes Here]</span></p>
+          <p>Clothes Rating: <span id="clothesRating">[Clothes Rating Goes Here]</span></p>
+          <p>Entertainment Rating: <span id="entertainmentRating">[Entertainment Rating Goes Here]</span></p>
+          <p>Electronics Rating: <span id="electronicsRating">[Electronics Rating Goes Here]</span></p>
+          <p>Weekly Online Shopping Budget: $<span id="budgetValue">[Budget Value Goes Here]</span></p>
+      </div>
+      
+    </div>
+</body>
+</html>

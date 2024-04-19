@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Budget Consultant",
+  "description": "Empowering users to smartly budget and reflect on their online shopping habits ",
+  "version": "1.2.0",
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.amazon.com/*",
+        "https://www.amazon.com/*",
+        "http://smile.amazon.com/*",
+        "https://smile.amazon.com/*",
+        "https://www.amazon.ca/*",
+        "https://www.amazon.co.uk/*",
+        "http://www.amazon.it/*",
+        "https://www.amazon.it/*",
+        "https://www.amazon.fr/*",
+        "https://www.amazon.es/*"
+      ],
+      "js": ["contentscript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "clipboardWrite"
+  ]
+}
